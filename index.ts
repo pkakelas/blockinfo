@@ -1,3 +1,3 @@
 import BlockchainClient from './lib/index'
 
-export default BlockchainClient
+export default new BlockchainClient()
