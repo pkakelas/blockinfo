@@ -13,8 +13,7 @@ npm install blockchainfo
 ### Initialization
 
 ```javascript
-const Blockchainfo = require('blockchainfo')
-const client = new Blockchainfo()
+const blockchainfo = require('blockchainfo')
 ```
 
 ### Methods
@@ -23,7 +22,7 @@ const client = new Blockchainfo()
 Fetches the latest block
 
 ```javascript
-const latestBlock = client.getLatestBlock()
+const latestBlock = blockchainfo.getLatestBlock()
 
 /*
   Block {
@@ -52,7 +51,7 @@ Fetches a block given its block hash
 
 ```javascript
 const blockHash = '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'
-const latestBlock = client.getBlock(blockHash)
+const latestBlock = blockchainfo.getBlock(blockHash)
 
 /*
   Block {
@@ -79,7 +78,7 @@ const latestBlock = client.getBlock(blockHash)
 Fetches a block given its block height
 
 ```javascript
-const firstBlock = await client.getBlockByHeight(0)
+const firstBlock = await blockchainfo.getBlockByHeight(0)
 
 /*
   Block {
@@ -107,7 +106,7 @@ Fetches a transaction given its hash
 
 ```javascript
 const transactionID = 'a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d'
-const transaction = await client.getTransaction(transactionID)
+const transaction = await blockchainfo.getTransaction(transactionID)
 
 /*
   Transaction {
@@ -141,7 +140,7 @@ const transaction = await client.getTransaction(transactionID)
 Fetches all unconfirmed transactions
 
 ```javascript
-const unconfirmedTransactions = await client.getUnconfirmedTransactions()
+const unconfirmedTransactions = await blockchainfo.getUnconfirmedTransactions()
 
 /*
   [
@@ -163,7 +162,7 @@ Fetches all details and transactions of a given address
 
 ```javascript
 const address = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
-const getAddress = client.getAddress(address)
+const getAddress = blockchainfo.getAddress(address)
 
 /*
   Address {
@@ -192,7 +191,7 @@ const getAddress = client.getAddress(address)
 Fetches the current difficulty target
 
 ```javascript
-const difficulty = await client.getDifficulty()
+const difficulty = await blockchainfo.getDifficulty()
 // 18997641161758
 ```
 
@@ -200,7 +199,7 @@ const difficulty = await client.getDifficulty()
 Fetches the current block height in the longest chain
 
 ```javascript
-const count = await client.getBlockCount()
+const count = await blockchainfo.getBlockCount()
 // 703348
 ```
 
