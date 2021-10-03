@@ -5,7 +5,7 @@ A typescript module for interacting with the blockchain.info.
 ## Installation
 
 ```
-npm install blockinfo
+npm install blockchainfo
 ```
 
 ## API
@@ -13,14 +13,13 @@ npm install blockinfo
 ### Initialization
 
 ```javascript
-	const BlockInfo = require('blockinfo')
-	const client = new BlockInfo()
+	const Blockchainfo = require('blockchainfo')
+	const client = new Blockchainfo()
 ```
 
 ### Methods
 
 ####  getLatestBlock()
-
 Fetches the latest block
 
 ```javascript
@@ -53,7 +52,7 @@ Fetches a block given its block hash
 
 ```javascript
 const blockHash = '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'
-const latestBlock = client.getBlock(blockhash)
+const latestBlock = client.getBlock(blockHash)
 /*
   Block {
     hash: '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f',
@@ -75,8 +74,8 @@ const latestBlock = client.getBlock(blockhash)
 */
 ```
 
-### getBlock(hash: string)
-Fetches a block given its height
+### getBlockByHeight()
+Fetches a block given its block height
 
 ```javascript
 const firstBlock = await client.getBlockByHeight(0)
@@ -103,6 +102,7 @@ const firstBlock = await client.getBlockByHeight(0)
 ```
 
 ### getTransaction()
+Fetches a transaction given its hash
 
 ```javascript
 const transactionID = 'a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d'
@@ -137,6 +137,7 @@ const transaction = await client.getTransaction(transactionID)
 ```
 
 ### getUnconfirmedTransactions
+Fetches all unconfirmed transactions
 
 ```javascript
 const unconfirmedTransactions = await client.getUnconfirmedTransactions()
@@ -157,6 +158,8 @@ const unconfirmedTransactions = await client.getUnconfirmedTransactions()
 ```
 
 ### getAddress()
+Fetches all details and transactions of a given address
+
 ```javascript
 const address = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
 const getAddress = client.getAddress(address)
@@ -185,6 +188,7 @@ const getAddress = client.getAddress(address)
 ```
 
 ### getDifficulty()
+Fetches the current difficulty target
 
 ```javascript
 const difficulty = await client.getDifficulty()
@@ -192,6 +196,7 @@ const difficulty = await client.getDifficulty()
 ```
 
 ### getBlockCount
+Fetches the current block height in the longest chain
 
 ```javascript
 const count = await client.getBlockCount()
