@@ -54,7 +54,7 @@ export default class {
         return this.client('/q/getlatesthash') as any as Hash
     }
 
-    public async getAddress(address: Hash): Promise<any> {
+    public async getAddressInfo(address: Hash): Promise<any> {
         const res = await this.client(`/rawaddr/${address}`)
         return Address.constructFromObj(res)
     }

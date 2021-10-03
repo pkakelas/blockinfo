@@ -108,7 +108,7 @@ test('getUnconfirmedTransactions', async () => {
 
 test('getAddress', async () => {
     const nakamotoAddress = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
-    const address = await client.getAddress(nakamotoAddress)
+    const address = await client.getAddressInfo(nakamotoAddress)
 
     expect(address).toBeDefined()
     expect(address.address).toEqual('1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa')
@@ -123,7 +123,7 @@ test('getAddress', async () => {
     expect(address.transactionsCount).toEqual(address.unredeemedTransactionsCount)
     expect(Array.isArray(address.transactions)).toBe(true)
 
-    expect(client.getAddress('Invalid Address'))
+    expect(client.getAddressInfo('Invalid Address'))
         .rejects.toHaveProperty('message', 'Not Found')
 })
 
