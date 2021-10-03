@@ -1,6 +1,6 @@
 {
-  "name": "blockinfo",
-  "version": "1.0.0",
+  "name": "blockchainfo",
+  "version": "1.0.1",
   "description": "A typed wrapper of the blockchain.info API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,8 +18,15 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest"
+    "test": "jest dist/"
   },
   "author": "pkakelas",
-  "license": "WTFPL"
+  "license": "WTFPL",
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  }
 }
