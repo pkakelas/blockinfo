@@ -26,22 +26,22 @@ const latestBlock = infoblock.getLatestBlock()
 
 /*
   Block {
-	hash: '0000000000000000000b99a912590820bc610c0c448e7d08bd5076680e171c84',
-	time: 2021-10-03T11:44:21.000Z,
-	height: 703360,
-	previousBlockHash: '0000000000000000000e928aac5b6c2f8906477a9e8cc45a10e93d136288fa41',
-	merkleTreeRoot: '04c017abe57e0bcbd482394647709e2a7f72a71dcef9f57c01fee1a09e63bd82',
-	transactions: [
-	  Transaction {
-		hash: '161e42dc4db029ca3b5971fb0268e0f05fbb4e91dc2283b8239c357e565f1086',
-		time: 2021-10-03T11:44:21.000Z,
-		fee: 0,
-		blockHeight: 703360,
-		txInputs: [Array],
-		txOutputs: [Array]
-	  },
-	  ...
-	]
+    hash: '0000000000000000000b99a912590820bc610c0c448e7d08bd5076680e171c84',
+    time: 2021-10-03T11:44:21.000Z,
+    height: 703360,
+    previousBlockHash: '0000000000000000000e928aac5b6c2f8906477a9e8cc45a10e93d136288fa41',
+    merkleTreeRoot: '04c017abe57e0bcbd482394647709e2a7f72a71dcef9f57c01fee1a09e63bd82',
+    transactions: [
+      Transaction {
+        hash: '161e42dc4db029ca3b5971fb0268e0f05fbb4e91dc2283b8239c357e565f1086',
+        time: 2021-10-03T11:44:21.000Z,
+        fee: 0,
+        blockHeight: 703360,
+        txInputs: [Array],
+        txOutputs: [Array]
+      },
+      ...
+    ]
   }
 */
 ```
