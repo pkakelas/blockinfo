@@ -74,7 +74,7 @@ const latestBlock = infoblock.getBlock(blockHash)
 */
 ```
 
-### getBlockByHeight()
+### getBlockByHeight(height: number)
 Fetches a block given its block height
 
 ```javascript
@@ -101,7 +101,7 @@ const firstBlock = await infoblock.getBlockByHeight(0)
 */
 ```
 
-### getTransaction()
+### getTransaction(txId: string)
 Fetches a transaction given its hash
 
 ```javascript
@@ -136,7 +136,7 @@ const transaction = await infoblock.getTransaction(transactionID)
 
 ```
 
-### getUnconfirmedTransactions
+### getUnconfirmedTransactions()
 Fetches all unconfirmed transactions
 
 ```javascript
@@ -157,7 +157,7 @@ const unconfirmedTransactions = await infoblock.getUnconfirmedTransactions()
 */
 ```
 
-### getAddress()
+### getAddress(address: string)
 Fetches all details and transactions of a given address
 
 ```javascript
@@ -195,7 +195,7 @@ const difficulty = await infoblock.getDifficulty()
 // 18997641161758
 ```
 
-### getBlockCount
+### getBlockCount()
 Fetches the current block height in the longest chain
 
 ```javascript
