@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios'
 import * as CustomErrors from './error'
 
-function getAxiosInstance (): AxiosInstance {
+export function createAxiosClient(): AxiosInstance {
     const instance =  axios.create({
         baseURL: 'https://blockchain.info'
     })
@@ -26,5 +26,3 @@ const handleErrors = (error: AxiosError) => {
 
     throw error
 }
-
-export default getAxiosInstance

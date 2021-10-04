@@ -1,4 +1,4 @@
-import createRequestInstance from './client'
+import { createAxiosClient } from './client'
 import { Block } from './Block'
 import Transaction from "./Transaction"
 import Address from "./Address"
@@ -6,7 +6,7 @@ import { Satoshi, Hash } from './types'
 import { InvalidInputError } from './error'
 
 export default class {
-    private client = createRequestInstance()
+    private client = createAxiosClient()
 
     public async getBlock(hash: string): Promise<Block> {
         const res = await this.client.get(`/rawblock/${hash}`)
