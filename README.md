@@ -1,11 +1,11 @@
-# Blockinfo
+# Infoblock
 
 A typescript module for interacting with the blockchain.info.
 
 ## Installation
 
 ```
-npm install blockchainfo
+npm install infoblock
 ```
 
 ## API
@@ -13,7 +13,7 @@ npm install blockchainfo
 ### Initialization
 
 ```javascript
-const blockchainfo = require('blockchainfo')
+const infoblock = require('infoblock')
 ```
 
 ### Methods
@@ -22,7 +22,7 @@ const blockchainfo = require('blockchainfo')
 Fetches the latest block
 
 ```javascript
-const latestBlock = blockchainfo.getLatestBlock()
+const latestBlock = infoblock.getLatestBlock()
 
 /*
   Block {
@@ -51,7 +51,7 @@ Fetches a block given its block hash
 
 ```javascript
 const blockHash = '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f'
-const latestBlock = blockchainfo.getBlock(blockHash)
+const latestBlock = infoblock.getBlock(blockHash)
 
 /*
   Block {
@@ -78,7 +78,7 @@ const latestBlock = blockchainfo.getBlock(blockHash)
 Fetches a block given its block height
 
 ```javascript
-const firstBlock = await blockchainfo.getBlockByHeight(0)
+const firstBlock = await infoblock.getBlockByHeight(0)
 
 /*
   Block {
@@ -106,7 +106,7 @@ Fetches a transaction given its hash
 
 ```javascript
 const transactionID = 'a1075db55d416d3ca199f55b6084e2115b9345e16c5cf302fc80e9d5fbf5d48d'
-const transaction = await blockchainfo.getTransaction(transactionID)
+const transaction = await infoblock.getTransaction(transactionID)
 
 /*
   Transaction {
@@ -140,7 +140,7 @@ const transaction = await blockchainfo.getTransaction(transactionID)
 Fetches all unconfirmed transactions
 
 ```javascript
-const unconfirmedTransactions = await blockchainfo.getUnconfirmedTransactions()
+const unconfirmedTransactions = await infoblock.getUnconfirmedTransactions()
 
 /*
   [
@@ -162,7 +162,7 @@ Fetches all details and transactions of a given address
 
 ```javascript
 const address = '1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa'
-const getAddress = blockchainfo.getAddress(address)
+const getAddress = infoblock.getAddress(address)
 
 /*
   Address {
@@ -191,7 +191,7 @@ const getAddress = blockchainfo.getAddress(address)
 Fetches the current difficulty target
 
 ```javascript
-const difficulty = await blockchainfo.getDifficulty()
+const difficulty = await infoblock.getDifficulty()
 // 18997641161758
 ```
 
@@ -199,13 +199,13 @@ const difficulty = await blockchainfo.getDifficulty()
 Fetches the current block height in the longest chain
 
 ```javascript
-const count = await blockchainfo.getBlockCount()
+const count = await infoblock.getBlockCount()
 // 703348
 ```
 
 ## Testing
 
-This module is thoroughly e2e tested with jest.
+This module is thoroughly e2e tested with Jest.
 Run the with using `npm run test'
 
 
